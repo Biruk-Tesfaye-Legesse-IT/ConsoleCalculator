@@ -49,3 +49,34 @@ function subtract() {
     });
     console.log("Difference is " + difference);
 }
+
+function multiply() {
+    const inputNumbers = prompt("Enter the numbers separated by a comma: ");
+    let numbers;
+    let product = 1;
+
+    numbers = inputNumbers.split(",");
+
+    numbers.forEach(function(value) {
+        product *= Number(value);
+    });
+    console.log("Product is " + product);
+}
+
+function divide() {
+
+    const inputNumbers = prompt("Enter the numbers separated by a comma: ");
+    let numbers;
+    numbers = inputNumbers.split(",");
+    let dividend = Number(numbers[0]);
+
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] == 0) {
+            dividend = "Invalid Input";
+            break;
+        } else {
+            dividend = dividend / Number(numbers[i]);
+        }
+    }
+    console.log("The quotient is " + dividend);
+}
