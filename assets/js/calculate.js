@@ -26,6 +26,13 @@
             sqrt();
             break;
 
+        case "7":
+            average();
+            break;
+        case "8":
+            areaCircle();
+            break;
+
 
     }
 })();
@@ -100,4 +107,27 @@ function sqrt() {
     const input = prompt("Enter the number you want to find the square root of: ");
     let result = Math.sqrt(input);
     console.log("Result is: " + result);
+}
+
+
+function average() {
+    const numbers = prompt("Enter the numbers separated by a comma: ");
+    let listNumbers = numbers.split(",");
+    let sum = 0;
+    let average;
+    listNumbers.forEach(function(value) {
+        sum += Number(value);
+    });
+    average = sum / listNumbers.length;
+    console.log("Average is : " + average);
+}
+
+function areaCircle() {
+    const radius = prompt("Enter the radius of the circle");
+    let rSquare = radius ** radius;
+
+    let area = (3.141592653589793238 * rSquare).toFixed(2);
+
+
+    console.log("The area is: " + area);
 }
