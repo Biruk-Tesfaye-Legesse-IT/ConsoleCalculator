@@ -19,6 +19,13 @@
         case "4":
             divide();
             break;
+        case "5":
+            power();
+            break;
+        case "6":
+            sqrt();
+            break;
+
 
     }
 })();
@@ -79,4 +86,18 @@ function divide() {
         }
     }
     console.log("The quotient is " + dividend);
+}
+
+function power() {
+    const base = prompt("Enter the base: ");
+    const power = prompt("Enter the power/exponent: ");
+
+    let result = base ** power;
+    console.log("Result: " + result);
+}
+
+function sqrt() {
+    const input = prompt("Enter the number you want to find the square root of: ");
+    let result = Math.sqrt(input);
+    console.log("Result is: " + result);
 }
